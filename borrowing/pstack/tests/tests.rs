@@ -23,6 +23,7 @@ fn simple() {
 fn persistence() {
     let mut stacks = vec![PStack::new()];
     for i in 0..100 {
+		
         let st = stacks.last_mut().unwrap().push(i);
         stacks.push(st);
     }
@@ -54,8 +55,8 @@ fn persistence() {
         for (item, i) in stack.iter().zip((0..200 - i).rev()) {
             assert_eq!(i, *item);
             cnt += 1;
-        }
-        assert_eq!(200 - i, cnt);
+			
+        } assert_eq!(200 - i, cnt);
     }
 }
 
